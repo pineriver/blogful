@@ -9,8 +9,9 @@
     </div>
     <div class="col-md-10">
         <h1>
-            {{ entry.title }}
-        </h1>
+           {{ entry.title }}
+          </h1>
+        <h3>{{ entry.author.name }}</h3>
         {{ entry.content | markdown }}
     </div>
 </div>
