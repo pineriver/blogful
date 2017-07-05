@@ -13,6 +13,8 @@ def entries(page=1):
     
     count = session.query(Entry).count()
     
+    
+    
     start = page_index * PAGINATE_BY
     end = start + PAGINATE_BY
     
@@ -43,7 +45,6 @@ from flask import request, redirect, url_for
 from flask_login import current_user
 
 @app.route("/entry/add", methods=["POST"])
-
 def add_entry_post():
     entry = Entry(
         title=request.form["title"],

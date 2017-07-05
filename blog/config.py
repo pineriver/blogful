@@ -4,3 +4,8 @@ class DevelopmentConfig(object):
     DEBUG = True
     SECRET_Key = os.environ.get("BLOGFUL_SECRET_KEY", os.urandom(12))
     
+    
+class TestingConfig(object):
+    SQLALCHEMY_DATABASE_URI = "postgresql://ubuntu:thinkful@localhost:5432/blogful-test"
+    DEBUG = False
+    SECRET_KEY = "Not secret"
